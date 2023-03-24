@@ -1,4 +1,10 @@
 import Head from "next/head";
+import Image from "next/image";
+import GithubIcon from "../../public/images/icon-github.svg";
+import FrontendMentorIcon from "../../public/images/icon-frontend-mentor.svg";
+import LinkedinIcon from "../../public/images/icon-linkedin.svg";
+import TwitterIcon from "../../public/images/icon-twitter.svg";
+import ProfileImage from "../../public/images/image-profile-desktop.webp";
 
 export default function Home() {
   return (
@@ -10,7 +16,66 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <h1 className="text-3xl font-bold text-center">Developer Portfolio</h1>
+        <section>
+          <div
+            className="max-w-5xl mx-auto relative"
+            style={{
+              borderBottomColor: "#979797",
+              borderBottomWidth: "2px",
+            }}
+          >
+            <Image
+              src={ProfileImage}
+              className="absolute top-0 right-0"
+              alt="Profile Image"
+              width={445}
+            />
+            <nav className="py-10 pr-7 flex justify-between items-center mb-28 relative">
+              <p className="text-3xl font-bold">adamkeyes</p>
+              <ul className="flex justify-between items-center gap-8">
+                <li>
+                  <Image src={GithubIcon} alt="Icon" />
+                </li>
+                <li>
+                  <Image src={FrontendMentorIcon} alt="Icon" />
+                </li>
+                <li>
+                  <Image src={LinkedinIcon} alt="Icon" />
+                </li>
+                <li>
+                  <Image src={TwitterIcon} alt="Icon" />
+                </li>
+              </ul>
+            </nav>
+            <div className="w-[700px] mb-[219px] relative">
+              <h1 className="text-7xl font-bold  z-50">Nice to meet you!</h1>
+              <h1 className="text-7xl font-bold mb-11">
+                I'm{" "}
+                <span
+                  style={{
+                    borderBottomColor: "#4EE1A0",
+                    borderBottomWidth: "6px",
+                  }}
+                >
+                  Adam Keyes.
+                </span>
+              </h1>
+              <p className="text-lg w-[445px] mb-16">
+                Based in the UK, I’m a front-end developer passionate about
+                building accessible web apps that users love.
+              </p>
+              <button
+                className="uppercase font-bold text-base tracking-wide py-2"
+                style={{
+                  borderBottomColor: "#4EE1A0",
+                  borderBottomWidth: "2px",
+                }}
+              >
+                contact me
+              </button>
+            </div>
+          </div>
+        </section>
       </main>
     </>
   );
