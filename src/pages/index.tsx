@@ -29,6 +29,7 @@ export default function Home() {
               className="absolute top-0 right-0"
               alt="Profile Image"
               width={445}
+              placeholder="blur"
             />
             <nav className="py-10 pr-7 flex justify-between items-center mb-28 relative">
               <p className="text-3xl font-bold">adamkeyes</p>
