@@ -76,6 +76,38 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <div className="max-w-5xl mx-auto py-[72px] grid grid-cols-3 gap-y-14 justify-between">
+          <div>
+            <h1 className="text-5xl font-bold mb-[14px]">HTML</h1>
+            <p className="text-md">4 Years Experience</p>
+          </div>
+
+          <div className="justify-self-center">
+            <h1 className="text-5xl font-bold mb-[14px]">CSS</h1>
+            <p className="text-md">4 Years Experience</p>
+          </div>
+
+          <div className="justify-self-end">
+            <h1 className="text-5xl font-bold mb-[14px]">Javascript</h1>
+            <p className="text-md">4 Years Experience</p>
+          </div>
+
+          <div>
+            <h1 className="text-5xl font-bold mb-[14px]">Accessibility</h1>
+            <p className="text-md">4 Years Experience</p>
+          </div>
+
+          <div className=" justify-self-center">
+            <h1 className="text-5xl font-bold mb-[14px]">REACT</h1>
+            <p className="text-md">4 Years Experience</p>
+          </div>
+
+          <div className="justify-self-end mr-[100px]">
+            <h1 className="text-5xl font-bold mb-[14px]">SASS</h1>
+            <p className="text-md">4 Years Experience</p>
+          </div>
+        </div>
       </main>
     </>
   );
