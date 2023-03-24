@@ -51,7 +51,7 @@ export default function Home() {
             <div className="w-[700px] mb-[219px] relative">
               <h1 className="text-7xl font-bold  z-50">Nice to meet you!</h1>
               <h1 className="text-7xl font-bold mb-11">
-                I'm{" "}
+                I&apos;m{" "}
                 <span
                   style={{
                     borderBottomColor: "#4EE1A0",
