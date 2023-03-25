@@ -5,6 +5,12 @@ import FrontendMentorIcon from "../../public/images/icon-frontend-mentor.svg";
 import LinkedinIcon from "../../public/images/icon-linkedin.svg";
 import TwitterIcon from "../../public/images/icon-twitter.svg";
 import ProfileImage from "../../public/images/image-profile-desktop.webp";
+import Project1Image from "../../public/images/thumbnail-project-1-large.webp";
+import Project2Image from "../../public/images/thumbnail-project-2-large.webp";
+import Project3Image from "../../public/images/thumbnail-project-3-large.webp";
+import Project4Image from "../../public/images/thumbnail-project-4-large.webp";
+import Project5Image from "../../public/images/thumbnail-project-5-large.webp";
+import Project6Image from "../../public/images/thumbnail-project-6-large.webp";
 
 export default function Home() {
   return (
@@ -107,6 +113,126 @@ export default function Home() {
           <div className="justify-self-end mr-[100px]">
             <h1 className="text-5xl font-bold mb-[14px]">SASS</h1>
             <p className="text-md">4 Years Experience</p>
+          </div>
+        </div>
+
+        <div className="max-w-5xl mx-auto my-10">
+          <div className="flex justify-between items-center mb-[80px]">
+            <h1 className="text-7xl font-bold">Projects</h1>
+            <button
+              className="uppercase font-bold text-base tracking-wide py-2"
+              style={{
+                borderBottomColor: "#4EE1A0",
+                borderBottomWidth: "2px",
+              }}
+            >
+              contact me
+            </button>
+          </div>
+
+          <div className="grid grid-cols-2 gap-x-[30px] gap-y-[70px]">
+            <div>
+              <Image
+                className="mb-5"
+                src={Project1Image}
+                placeholder="blur"
+                alt="Project1 Image"
+              />
+              <div>
+                <h2 className="text-[24px] font-bold mb-[7px]">
+                  DESIGN PORTFOLIO
+                </h2>
+                <ul className="flex items-center text-lg gap-[18px]">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <Image
+                className="mb-5"
+                src={Project2Image}
+                placeholder="blur"
+                alt="Project2 Image"
+              />
+              <div>
+                <h2 className="text-[24px] font-bold mb-[7px]">
+                  E-LEARNING LANDING PAGE
+                </h2>
+                <ul className="flex items-center text-lg gap-[18px]">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <Image
+                className="mb-5"
+                src={Project3Image}
+                placeholder="blur"
+                alt="Project3 Image"
+              />
+              <div>
+                <h2 className="text-[24px] font-bold mb-[7px]">TODO WEB APP</h2>
+                <ul className="flex items-center text-lg gap-[18px]">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JAVASCRIPT</li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <Image
+                className="mb-5"
+                src={Project4Image}
+                placeholder="blur"
+                alt="Project4 Image"
+              />
+              <div>
+                <h2 className="text-[24px] font-bold mb-[7px]">
+                  ENTERTAINMENT WEB APP
+                </h2>
+                <ul className="flex items-center text-lg gap-[18px]">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JAVASCRIPT</li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <Image
+                className="mb-5"
+                src={Project5Image}
+                placeholder="blur"
+                alt="Project5 Image"
+              />
+              <div>
+                <h2 className="text-[24px] font-bold mb-[7px]">MEMORY GAME</h2>
+                <ul className="flex items-center text-lg gap-[18px]">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JAVASCRIPT</li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <Image
+                className="mb-5"
+                src={Project6Image}
+                placeholder="blur"
+                alt="Project6 Image"
+              />
+              <div>
+                <h2 className="text-[24px] font-bold mb-[7px]">
+                  ART GALLERY SHOWCASE
+                </h2>
+                <ul className="flex items-center text-lg gap-[18px]">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JAVASCRIPT</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </main>
