@@ -5,14 +5,42 @@ import FrontendMentorIcon from "../../public/images/icon-frontend-mentor.svg";
 import LinkedinIcon from "../../public/images/icon-linkedin.svg";
 import TwitterIcon from "../../public/images/icon-twitter.svg";
 import ProfileImage from "../../public/images/profile-image.png";
+import ProfileImageMob from "../../public/images/profile-image-mob.png";
 import Project1Image from "../../public/images/project-1.png";
 import Project2Image from "../../public/images/project-2.png";
 import Project3Image from "../../public/images/project-3.png";
 import Project4Image from "../../public/images/project-4.png";
 import Project5Image from "../../public/images/project-5.png";
 import Project6Image from "../../public/images/project-6.png";
+import { useLayoutEffect, useState } from "react";
+
+const useOnMobile = () => {
+  const [isMobile, setIsMobile] = useState(true);
+
+  const resizeCallback = () => {
+    if (window.innerWidth < 768) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  };
+
+  useLayoutEffect(() => {
+    if (window.innerWidth > 767) {
+      setIsMobile(false);
+    }
+
+    window.addEventListener("resize", resizeCallback);
+    return () => {
+      window.removeEventListener("resize", resizeCallback);
+    };
+  }, []);
+  return isMobile;
+};
 
 export default function Home() {
+  const isMobile = useOnMobile();
+
   return (
     <>
       <Head>
@@ -31,32 +59,51 @@ export default function Home() {
             }}
           >
             <Image
-              src={ProfileImage}
-              className="absolute top-0 right-0"
+              src={isMobile ? ProfileImageMob : ProfileImage}
+              className="absolute top-0 right-2/4 translate-x-2/4 w-[174px] md:w-[445px] md:h-[auto] md:right-0 md:translate-x-0"
               alt="Profile Image"
-              width={445}
               placeholder="blur"
             />
-            <nav className="py-10 pr-7 flex justify-between items-center mb-28 relative">
-              <p className="text-3xl font-bold">adamkeyes</p>
-              <ul className="flex justify-between items-center gap-8">
+            <nav className="py-5 xl:py-10 md:pr-7 flex flex-col md:flex-row md:justify-between items-center mb-28 relative">
+              <p className="text-2xl md:text-[32px] font-bold mb-5 md:mb-0">
+                adamkeyes
+              </p>
+              <ul className="flex justify-between items-center gap-[25px] md:gap-8">
                 <li>
-                  <Image src={GithubIcon} alt="Icon" />
+                  <Image
+                    className="h-5 w-5 md:h-auto md:w-auto"
+                    src={GithubIcon}
+                    alt="Icon"
+                  />
                 </li>
                 <li>
-                  <Image src={FrontendMentorIcon} alt="Icon" />
+                  <Image
+                    className="h-5 w-5 md:h-auto md:w-auto"
+                    src={FrontendMentorIcon}
+                    alt="Icon"
+                  />
                 </li>
                 <li>
-                  <Image src={LinkedinIcon} alt="Icon" />
+                  <Image
+                    className="h-5 w-5 md:h-auto md:w-auto"
+                    src={LinkedinIcon}
+                    alt="Icon"
+                  />
                 </li>
                 <li>
-                  <Image src={TwitterIcon} alt="Icon" />
+                  <Image
+                    className="h-5 w-5 md:h-auto md:w-auto"
+                    src={TwitterIcon}
+                    alt="Icon"
+                  />
                 </li>
               </ul>
             </nav>
-            <div className="w-[700px] mb-[219px] relative">
-              <h1 className="text-7xl font-bold  z-50">Nice to meet you!</h1>
-              <h1 className="text-7xl font-bold mb-11">
+            <div className="text-center md:text-left mt-[310px] md:mt-0 md:w-[700px] mb-20 md:mb-[219px] relative px-4 md:px-0">
+              <h1 className="text-[40px] md:text-7xl font-bold  z-50">
+                Nice to meet you!
+              </h1>
+              <h1 className="text-[40px] md:text-7xl font-bold mb-11">
                 I&apos;m{" "}
                 <span
                   style={{
@@ -67,7 +114,7 @@ export default function Home() {
                   Adam Keyes.
                 </span>
               </h1>
-              <p className="text-lg w-[445px] mb-16">
+              <p className="text-md md:text-lg md:w-[445px] mb-16">
                 Based in the UK, I’m a front-end developer passionate about
                 building accessible web apps that users love.
               </p>
@@ -84,41 +131,53 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="max-w-5xl mx-auto py-[72px] grid grid-cols-3 gap-y-14 justify-between">
-          <div>
-            <h1 className="text-5xl font-bold mb-[14px]">HTML</h1>
+        <div className="max-w-5xl mx-auto py-[40px] md:py-[72px] grid md:grid-cols-3 gap-y-6 md:gap-y-14">
+          <div className="justify-self-center md:justify-self-start text-center md:text-left">
+            <h1 className="text-[32px] md:text-5xl font-bold md:mb-[14px]">
+              HTML
+            </h1>
             <p className="text-md">4 Years Experience</p>
           </div>
 
-          <div className="justify-self-center">
-            <h1 className="text-5xl font-bold mb-[14px]">CSS</h1>
+          <div className="justify-self-center md:justify-self-center text-center md:text-left">
+            <h1 className="text-[32px] md:text-5xl font-bold md:mb-[14px]">
+              CSS
+            </h1>
             <p className="text-md">4 Years Experience</p>
           </div>
 
-          <div className="justify-self-end">
-            <h1 className="text-5xl font-bold mb-[14px]">Javascript</h1>
+          <div className="justify-self-center md:justify-self-end text-center md:text-left">
+            <h1 className="text-[32px] md:text-5xl font-bold md:mb-[14px]">
+              Javascript
+            </h1>
             <p className="text-md">4 Years Experience</p>
           </div>
 
-          <div>
-            <h1 className="text-5xl font-bold mb-[14px]">Accessibility</h1>
+          <div className="justify-self-center md:justify-self-start text-center md:text-left">
+            <h1 className="text-[32px] md:text-5xl font-bold md:mb-[14px]">
+              Accessibility
+            </h1>
             <p className="text-md">4 Years Experience</p>
           </div>
 
-          <div className=" justify-self-center">
-            <h1 className="text-5xl font-bold mb-[14px]">REACT</h1>
+          <div className="justify-self-center md:justify-self-center text-center md:text-left">
+            <h1 className="text-[32px] md:text-5xl font-bold md:mb-[14px]">
+              REACT
+            </h1>
             <p className="text-md">4 Years Experience</p>
           </div>
 
-          <div className="justify-self-end mr-[100px]">
-            <h1 className="text-5xl font-bold mb-[14px]">SASS</h1>
+          <div className="justify-self-center md:justify-self-end text-center md:text-left md:mr-[100px]">
+            <h1 className="text-[32px] md:text-5xl font-bold md:mb-[14px]">
+              SASS
+            </h1>
             <p className="text-md">4 Years Experience</p>
           </div>
         </div>
 
-        <div className="max-w-5xl mx-auto my-10">
-          <div className="flex justify-between items-center mb-[80px]">
-            <h1 className="text-7xl font-bold">Projects</h1>
+        <div className="max-w-5xl mx-auto my-10 px-4 md:px-0">
+          <div className="flex justify-between items-center mb-10 md:mb-[80px]">
+            <h1 className="text-[40px] md:text-7xl font-bold">Projects</h1>
             <button
               className="uppercase font-bold text-base tracking-wide py-2"
               style={{
@@ -130,7 +189,7 @@ export default function Home() {
             </button>
           </div>
 
-          <div className="grid grid-cols-2 gap-x-[30px] gap-y-[70px]">
+          <div className="grid md:grid-cols-2 md:gap-x-[30px] gap-y-[40px] md:gap-y-[70px]">
             <div>
               <Image
                 className="mb-5"
@@ -236,36 +295,38 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="bg-[#242424] mt-[130px] py-[84px]">
+        <div className="bg-[#242424] md:mt-[130px] py-[60px] md:py-[84px] px-4 md:px-0">
           <div className="max-w-5xl mx-auto">
-            <div className="flex justify-between items-start border-b-2 border-b-[#979797] pb-[92px]">
-              <div className="w-[450px]">
-                <h1 className="text-7xl font-bold mb-9">Contact</h1>
-                <p className="text-lg">
+            <div className="flex flex-col md:flex-row md:justify-between border-b-2 border-b-[#979797] pb-[92px] gap-y-[50px] md:gap-y-0">
+              <div className="md:w-[450px] text-center md:text-left">
+                <h1 className="text-[40px] md:text-7xl font-bold mb-5 md:mb-9">
+                  Contact
+                </h1>
+                <p className="text-md md:text-lg">
                   I would love to hear about your project and how I could help.
                   Please fill in the form, and I&apos;ll get back to you as soon
                   as possible.
                 </p>
               </div>
 
-              <form>
+              <form className="w-full md:w-auto">
                 <div>
                   <input
-                    className="focus:outline-none w-[445px] px-6 mb-8 pb-4 bg-transparent border-b-2 border-b-[#979797]"
+                    className="focus:outline-none w-full md:w-[445px] px-6 mb-8 pb-4 bg-transparent border-b-2 border-b-[#979797]"
                     type="text"
                     placeholder="NAME"
                   />
                 </div>
                 <div>
                   <input
-                    className="focus:outline-none w-[445px] px-6 mb-8 pb-4 bg-transparent border-b-2 border-b-[#979797]"
+                    className="focus:outline-none w-full md:w-[445px] px-6 mb-8 pb-4 bg-transparent border-b-2 border-b-[#979797]"
                     type="text"
                     placeholder="EMAIL"
                   />
                 </div>
                 <div>
                   <textarea
-                    className="focus:outline-none w-[445px] px-6 mb-4 bg-transparent border-b-2 border-b-[#979797]"
+                    className="focus:outline-none w-full md:w-[445px] px-6 mb-4 bg-transparent border-b-2 border-b-[#979797]"
                     rows={4}
                     placeholder="MESSAGE"
                   ></textarea>
@@ -283,20 +344,36 @@ export default function Home() {
                 </div>
               </form>
             </div>
-            <nav className="pt-10 pr-7 flex justify-between items-center">
-              <p className="text-3xl font-bold">adamkeyes</p>
+            <nav className="pt-10 pr-7 flex flex-col md:flex-row items-center justify-between gap-5 md:gap-0">
+              <p className="text-2xl md:text-3xl font-bold">adamkeyes</p>
               <ul className="flex justify-between items-center gap-8">
                 <li>
-                  <Image src={GithubIcon} alt="Icon" />
+                  <Image
+                    className="h-5 w-5 md:h-auto md:w-auto"
+                    src={GithubIcon}
+                    alt="Icon"
+                  />
                 </li>
                 <li>
-                  <Image src={FrontendMentorIcon} alt="Icon" />
+                  <Image
+                    className="h-5 w-5 md:h-auto md:w-auto"
+                    src={FrontendMentorIcon}
+                    alt="Icon"
+                  />
                 </li>
                 <li>
-                  <Image src={LinkedinIcon} alt="Icon" />
+                  <Image
+                    className="h-5 w-5 md:h-auto md:w-auto"
+                    src={LinkedinIcon}
+                    alt="Icon"
+                  />
                 </li>
                 <li>
-                  <Image src={TwitterIcon} alt="Icon" />
+                  <Image
+                    className="h-5 w-5 md:h-auto md:w-auto"
+                    src={TwitterIcon}
+                    alt="Icon"
+                  />
                 </li>
               </ul>
             </nav>
