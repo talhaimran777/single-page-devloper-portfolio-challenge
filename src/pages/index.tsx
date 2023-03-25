@@ -235,6 +235,73 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        <div className="bg-[#242424] mt-[130px] py-[84px]">
+          <div className="max-w-5xl mx-auto">
+            <div className="flex justify-between items-start border-b-2 border-b-[#979797] pb-[92px]">
+              <div className="w-[450px]">
+                <h1 className="text-7xl font-bold mb-9">Contact</h1>
+                <p className="text-lg">
+                  I would love to hear about your project and how I could help.
+                  Please fill in the form, and I&apos;ll get back to you as soon
+                  as possible.
+                </p>
+              </div>
+
+              <form>
+                <div>
+                  <input
+                    className="focus:outline-none w-[445px] px-6 mb-8 pb-4 bg-transparent border-b-2 border-b-[#979797]"
+                    type="text"
+                    placeholder="NAME"
+                  />
+                </div>
+                <div>
+                  <input
+                    className="focus:outline-none w-[445px] px-6 mb-8 pb-4 bg-transparent border-b-2 border-b-[#979797]"
+                    type="text"
+                    placeholder="EMAIL"
+                  />
+                </div>
+                <div>
+                  <textarea
+                    className="focus:outline-none w-[445px] px-6 mb-4 bg-transparent border-b-2 border-b-[#979797]"
+                    rows={4}
+                    placeholder="MESSAGE"
+                  ></textarea>
+                </div>
+                <div className="flex justify-end">
+                  <button
+                    className="focus:outline-none uppercase font-bold text-base tracking-wide py-2"
+                    style={{
+                      borderBottomColor: "#4EE1A0",
+                      borderBottomWidth: "2px",
+                    }}
+                  >
+                    send message
+                  </button>
+                </div>
+              </form>
+            </div>
+            <nav className="pt-10 pr-7 flex justify-between items-center">
+              <p className="text-3xl font-bold">adamkeyes</p>
+              <ul className="flex justify-between items-center gap-8">
+                <li>
+                  <Image src={GithubIcon} alt="Icon" />
+                </li>
+                <li>
+                  <Image src={FrontendMentorIcon} alt="Icon" />
+                </li>
+                <li>
+                  <Image src={LinkedinIcon} alt="Icon" />
+                </li>
+                <li>
+                  <Image src={TwitterIcon} alt="Icon" />
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
       </main>
     </>
   );
