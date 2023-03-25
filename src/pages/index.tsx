@@ -4,13 +4,13 @@ import GithubIcon from "../../public/images/icon-github.svg";
 import FrontendMentorIcon from "../../public/images/icon-frontend-mentor.svg";
 import LinkedinIcon from "../../public/images/icon-linkedin.svg";
 import TwitterIcon from "../../public/images/icon-twitter.svg";
-import ProfileImage from "../../public/images/image-profile-desktop.webp";
-import Project1Image from "../../public/images/thumbnail-project-1-large.webp";
-import Project2Image from "../../public/images/thumbnail-project-2-large.webp";
-import Project3Image from "../../public/images/thumbnail-project-3-large.webp";
-import Project4Image from "../../public/images/thumbnail-project-4-large.webp";
-import Project5Image from "../../public/images/thumbnail-project-5-large.webp";
-import Project6Image from "../../public/images/thumbnail-project-6-large.webp";
+import ProfileImage from "../../public/images/profile-image.png";
+import Project1Image from "../../public/images/project-1.png";
+import Project2Image from "../../public/images/project-2.png";
+import Project3Image from "../../public/images/project-3.png";
+import Project4Image from "../../public/images/project-4.png";
+import Project5Image from "../../public/images/project-5.png";
+import Project6Image from "../../public/images/project-6.png";
 
 export default function Home() {
   return (
