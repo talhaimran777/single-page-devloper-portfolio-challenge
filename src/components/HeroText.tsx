@@ -17,7 +17,7 @@ const HeroText = () => {
           {isTab ? <br /> : null} Adam Keyes.
         </span>
       </h1>
-      <p className="text-base md:text-lg mt-9 md:mt-[60px] md:w-[445px]">
+      <p className="text-base md:text-lg mt-9 md:mt-[60px] sm:w-[445px] sm:mx-auto md:mx-0">
         Based in the UK, I&apos;m a front-end developer passionate about
         building accessible web apps that users love.
       </p>
