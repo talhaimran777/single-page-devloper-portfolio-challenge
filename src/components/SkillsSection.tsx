@@ -28,7 +28,7 @@ const SkillsSection = () => {
 
   return (
     <div
-      className="py-[40px] grid md:grid-cols-2 xl:grid-cols-3 gap-y-6 md:gap-y-[52px] md:px-[30px] min-[1139px]:px-0 md:mt-[60px] lg:max-w-[1110px] lg:mx-auto "
+      className="py-[40px] grid md:grid-cols-2 xl:grid-cols-3 gap-y-6 md:gap-y-[52px] md:px-[30px] min-[1139px]:px-0 md:mt-[60px] lg:max-w-[1110px] lg:mx-auto"
       style={{
         borderBottomColor: "#979797",
         borderBottomWidth: "2px",
