@@ -23,8 +23,8 @@ const Project: React.FC<Props> = ({ project }) => {
       <div>
         <h2 className="text-[24px] font-bold mb-[7px]">{project.name}</h2>
         <ul className="flex items-center text-lg gap-[18px]">
-          {project.skills.map((skill) => (
-            <li>{skill}</li>
+          {project.skills.map((skill, idx) => (
+            <li key={idx}>{skill}</li>
           ))}
         </ul>
       </div>
