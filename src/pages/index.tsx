@@ -1,5 +1,6 @@
 import Head from "next/head";
 import HeroSection from "components/HeroSection";
+import SkillsSection from "components/SkillsSection";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       </Head>
       <main>
         <HeroSection />
+        <SkillsSection />
       </main>
     </>
   );
