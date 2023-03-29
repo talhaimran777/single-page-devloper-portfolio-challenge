@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Rings from "images/pattern-rings.svg";
+import Rings from "images/rings-pattern.png";
 import Footer from "components/Footer";
 
 const ContactSection = () => {
@@ -11,6 +11,7 @@ const ContactSection = () => {
           <div className="lg:w-[450px] text-center lg:text-left">
             <Image
               className="w-[530px] h-[129px] absolute bottom-[200px] md:bottom-[100px] lg:bottom-[110px] -left-2/4 md:-left-[390px] lg:-left-[370px]"
+              placeholder="blur"
               src={Rings}
               alt="Rings"
             />
