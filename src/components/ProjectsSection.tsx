@@ -49,7 +49,7 @@ const ProjectsSection = () => {
   ];
 
   return (
-    <div className="py-[70px] lg:py-[110px]  px-4 md:px-[30px] min-[1139px]:px-0 lg:max-w-[1110px] lg:mx-auto">
+    <div className="py-[70px] lg:py-[110px] px-4 md:px-[30px] min-[1139px]:px-0 lg:max-w-[1110px] lg:mx-auto">
       <div className="flex justify-between items-center mb-10 md:mb-[80px]">
         <h1 className="text-[40px] md:text-7xl lg:text-[88px] font-bold">
           Projects

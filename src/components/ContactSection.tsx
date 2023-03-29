@@ -1,12 +1,19 @@
 import React from "react";
+import Image from "next/image";
+import Rings from "images/pattern-rings.svg";
 import Footer from "components/Footer";
 
 const ContactSection = () => {
   return (
     <div className="bg-[#242424] py-[60px] lg:py-[84px] px-4 md:px-[30px] min-[1139px]:px-0">
-      <div className="lg:max-w-[1110px] lg:mx-auto">
-        <div className="flex flex-col lg:flex-row lg:justify-between pb-[92px] gap-y-[50px] lg:gap-y-0 sm:w-[445px] lg:w-auto sm:mx-auto">
+      <div className="lg:max-w-[1110px] lg:mx-auto  relative">
+        <div className="flex flex-col lg:flex-row lg:justify-between pb-[87px] gap-y-[50px] lg:gap-y-0 sm:w-[445px] lg:w-auto sm:mx-auto">
           <div className="lg:w-[450px] text-center lg:text-left">
+            <Image
+              className="w-[530px] h-[129px] absolute bottom-[200px] md:bottom-[100px] lg:bottom-[110px] -left-2/4 md:-left-[390px] lg:-left-[370px]"
+              src={Rings}
+              alt="Rings"
+            />
             <h1 className="text-[40px] md:text-7xl lg:text-[88px] font-bold mb-5 md:mb-6 lg:mb-9">
               Contact
             </h1>
