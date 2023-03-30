@@ -13,6 +13,7 @@ const ProjectsSection = () => {
     name: string;
     skills: string[];
     image: any;
+    transition_delay: number;
   }
 
   const projects: Project[] = [
@@ -20,31 +21,37 @@ const ProjectsSection = () => {
       name: "DESIGN PORTFOLIO",
       skills: ["HTML", "CSS"],
       image: Project1Image,
+      transition_delay: 0.1,
     },
     {
       name: "E-LEARNING LANDING PAGE",
       skills: ["HTML", "CSS"],
       image: Project2Image,
+      transition_delay: 0.2,
     },
     {
       name: "TODO WEB APP",
       skills: ["HTML", "CSS", "JAVASCRIPT"],
       image: Project3Image,
+      transition_delay: 0.3,
     },
     {
       name: "ENTERTAINMENT WEB APP",
       skills: ["HTML", "CSS", "JAVASCRIPT"],
       image: Project4Image,
+      transition_delay: 0.4,
     },
     {
       name: "MEMORY GAME",
       skills: ["HTML", "CSS", "JAVASCRIPT"],
       image: Project5Image,
+      transition_delay: 0.5,
     },
     {
       name: "ART GALLERY SHOWCASE",
       skills: ["HTML", "CSS", "JAVASCRIPT"],
       image: Project6Image,
+      transition_delay: 0.6,
     },
   ];
 
