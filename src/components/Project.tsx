@@ -35,12 +35,37 @@ const Project: React.FC<Props> = ({ project }) => {
       }}
       transition={{ delay: project.transition_delay, duration: 0.5 }}
     >
-      <Image
-        className="mb-5 w-full"
-        src={project.image}
-        placeholder="blur"
-        alt="Project1 Image"
-      />
+      <div className="mb-5 w-full relative">
+        <Image
+          className="w-full"
+          src={project.image}
+          placeholder="blur"
+          alt="Project1 Image"
+        />
+        <div className="hidden cursor-pointer absolute top-0 left-0 bottom-0 right-0 w-full h-full hover:bg-[#000000b8] transition-all hover:transition-all lg:flex justify-center items-center opacity-0 hover:opacity-100">
+          <div className="flex flex-col justify-center items-center w-full gap-y-12">
+            <button
+              className="focus:outline-none uppercase font-bold text-base tracking-wide py-2 block"
+              style={{
+                borderBottomColor: "#4EE1A0",
+                borderBottomWidth: "2px",
+              }}
+            >
+              View Project
+            </button>
+
+            <button
+              className="focus:outline-none uppercase font-bold text-base tracking-wide py-2"
+              style={{
+                borderBottomColor: "#4EE1A0",
+                borderBottomWidth: "2px",
+              }}
+            >
+              View Code
+            </button>
+          </div>
+        </div>
+      </div>
       <div>
         <h2 className="text-[24px] font-bold mb-[7px]">{project.name}</h2>
         <ul className="flex items-center text-lg gap-[18px]">
@@ -48,6 +73,27 @@ const Project: React.FC<Props> = ({ project }) => {
             <li key={idx}>{skill}</li>
           ))}
         </ul>
+        <div className="flex justify-start items-center gap-x-[30px] lg:hidden">
+          <button
+            className="focus:outline-none uppercase font-bold text-base tracking-wide py-2 block"
+            style={{
+              borderBottomColor: "#4EE1A0",
+              borderBottomWidth: "2px",
+            }}
+          >
+            View Project
+          </button>
+
+          <button
+            className="focus:outline-none uppercase font-bold text-base tracking-wide py-2"
+            style={{
+              borderBottomColor: "#4EE1A0",
+              borderBottomWidth: "2px",
+            }}
+          >
+            View Code
+          </button>
+        </div>
       </div>
     </motion.div>
   );
