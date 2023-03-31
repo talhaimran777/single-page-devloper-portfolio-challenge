@@ -39,7 +39,7 @@ const HeroSection = () => {
         }}
       >
         <Image
-          className="w-[129px] h-[129px] absolute top-[254px] -right-[64.5px] z-10 md:bottom-0 md:top-auto lg:top-[529px] lg:bottom-auto lg:right-[380px]"
+          className="w-[129px] h-[129px] absolute top-[254px] -right-[64.5px] z-10 md:bottom-[80px] md:top-auto lg:top-[529px] lg:bottom-auto lg:right-[380px]"
           placeholder="blur"
           src={Circle}
           alt="Circle"
