@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Rings from "images/rings-pattern.png";
 import Footer from "components/Footer";
+import Button from "components/Button";
 
 const ContactSection = () => {
   return (
@@ -48,15 +49,7 @@ const ContactSection = () => {
               ></textarea>
             </div>
             <div className="flex justify-end">
-              <button
-                className="focus:outline-none uppercase font-bold text-base tracking-wide py-2"
-                style={{
-                  borderBottomColor: "#4EE1A0",
-                  borderBottomWidth: "2px",
-                }}
-              >
-                send message
-              </button>
+              <Button text="Contact Us" />
             </div>
           </form>
         </div>

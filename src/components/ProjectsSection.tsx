@@ -7,6 +7,7 @@ import Project4Image from "images/project-4.png";
 import Project5Image from "images/project-5.png";
 import Project6Image from "images/project-6.png";
 import Project from "components/Project";
+import Button from "components/Button";
 
 const ProjectsSection = () => {
   interface Project {
@@ -61,15 +62,7 @@ const ProjectsSection = () => {
         <h1 className="text-[40px] md:text-7xl lg:text-[88px] font-bold">
           Projects
         </h1>
-        <button
-          className="uppercase font-bold text-base tracking-wide py-2"
-          style={{
-            borderBottomColor: "#4EE1A0",
-            borderBottomWidth: "2px",
-          }}
-        >
-          contact me
-        </button>
+        <Button text="contact me" />
       </div>
 
       <div className="grid md:grid-cols-2 gap-y-[40px] md:gap-y-[60px] md:gap-x-6 lg:gap-x-[30px]">
