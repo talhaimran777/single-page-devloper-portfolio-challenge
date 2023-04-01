@@ -1,19 +1,7 @@
-import { useEffect, useRef } from "react";
-import Image from "next/image";
 import Rings from "images/rings-pattern.png";
-import { useAnimation, useInView, motion } from "framer-motion";
+import Image from "next/image";
 
 const SkillsSection = () => {
-  const controls = useAnimation();
-  const ref = useRef(null);
-  const isInView = useInView(ref);
-
-  useEffect(() => {
-    if (isInView) {
-      controls.start("visible");
-    }
-  }, [controls, isInView]);
-
   const skills = [
     {
       name: "HTML",
@@ -55,32 +43,18 @@ const SkillsSection = () => {
         src={Rings}
         alt="Rings"
       />
-      <motion.hr
-        initial={{ y: -100, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{
-          delay: 4,
-        }}
-      ></motion.hr>
+      <hr />
       <div className="my-[40px] md:my-[52px] lg:my-[72px] grid md:grid-cols-2 xl:grid-cols-3 gap-y-6 md:gap-y-[52px]">
         {skills.map((skill, idx) => (
-          <motion.div
+          <div
             key={idx}
             className="justify-self-center md:justify-self-start text-center md:text-left"
-            ref={ref}
-            animate={controls}
-            initial="hidden"
-            variants={{
-              visible: { opacity: 1, y: 0 },
-              hidden: { opacity: 0, y: 100 },
-            }}
-            transition={{ delay: skill.transition_delay, duration: 0.5 }}
           >
             <h1 className="text-[32px] md:text-5xl font-bold md:mb-[14px]">
               {skill.name}
             </h1>
             <p className="text-md">{skill.experience}</p>
-          </motion.div>
+          </div>
         ))}
       </div>
     </div>

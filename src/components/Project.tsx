@@ -1,6 +1,5 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import Image from "next/image";
-import { useAnimation, useInView, motion } from "framer-motion";
 import Button from "components/Button";
 
 interface Project {
@@ -15,16 +14,6 @@ interface Props {
 }
 
 const Project: React.FC<Props> = ({ project }) => {
-  const controls = useAnimation();
-  const ref = useRef(null);
-  const isInView = useInView(ref);
-
-  useEffect(() => {
-    if (isInView) {
-      controls.start("visible");
-    }
-  }, [controls, isInView]);
-
   const buttons = (
     <>
       <Button text="View Project" classes="block" />
@@ -33,15 +22,7 @@ const Project: React.FC<Props> = ({ project }) => {
   );
 
   return (
-    <motion.div
-      ref={ref}
-      animate={controls}
-      initial="hidden"
-      variants={{
-        visible: { opacity: 1, y: 0 },
-        hidden: { opacity: 0, y: 100 },
-      }}
-      transition={{ delay: project.transition_delay, duration: 0.5 }}
+    <div
     >
       <div className="mb-5 w-full relative">
         <Image
@@ -67,7 +48,7 @@ const Project: React.FC<Props> = ({ project }) => {
           {buttons}
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
