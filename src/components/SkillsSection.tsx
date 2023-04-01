@@ -48,7 +48,7 @@ const SkillsSection = () => {
   ];
 
   return (
-    <div className="px-4 md:px-[30px] min-[1139px]:px-0 lg:mt-[220px] lg:max-w-[1110px] lg:mx-auto relative overflow-x-clip 2xl:overflow-visible">
+    <div className="px-4 md:px-[30px] min-[1139px]:px-0 lg:mt-[209px] lg:max-w-[1110px] lg:mx-auto relative overflow-x-clip 2xl:overflow-visible">
       <Image
         className="w-[265px] md:w-[530px] h-[129px] absolute -bottom-[64.5px] -right-[75px] md:-right-[265px] min-[1139px]:-right-0 min-[1680px]:-right-[265px]"
         placeholder="blur"

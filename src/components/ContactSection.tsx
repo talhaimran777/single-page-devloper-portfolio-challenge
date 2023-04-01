@@ -29,21 +29,21 @@ const ContactSection = () => {
           <form className="w-full lg:w-auto">
             <div>
               <input
-                className="focus:outline-none w-full lg:w-[445px] px-6 mb-8 pb-4 bg-transparent border-b-2 border-b-[#979797]"
+                className="outline-none w-full lg:w-[445px] px-6 mb-8 pb-4 bg-transparent border-b-2 border-b-[#979797]"
                 type="text"
                 placeholder="NAME"
               />
             </div>
             <div>
               <input
-                className="focus:outline-none w-full lg:w-[445px] px-6 mb-8 pb-4 bg-transparent border-b-2 border-b-[#979797]"
+                className="outline-none w-full lg:w-[445px] px-6 mb-8 pb-4 bg-transparent border-b-2 border-b-[#979797]"
                 type="text"
                 placeholder="EMAIL"
               />
             </div>
             <div>
               <textarea
-                className="focus:outline-none w-full lg:w-[445px] px-6 mb-4 bg-transparent border-b-2 border-b-[#979797]"
+                className="outline-none w-full lg:w-[445px] px-6 mb-4 bg-transparent border-b-2 border-b-[#979797]"
                 rows={4}
                 placeholder="MESSAGE"
               ></textarea>

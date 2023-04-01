@@ -24,7 +24,7 @@ const HeroSection = () => {
         }}
       >
         <Image
-          className="w-[530px] h-[129px] absolute top-[124px] -left-2/4 md:-left-[270px] md:top-[90px]"
+          className="w-[530px] h-[129px] absolute top-[124px] -left-2/4 md:-left-[270px] md:top-[96px] lg:top-[120px]"
           placeholder="blur"
           src={Rings}
           alt="Rings"
