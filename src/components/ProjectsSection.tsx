@@ -8,12 +8,13 @@ import Project5Image from "images/project-5.png";
 import Project6Image from "images/project-6.png";
 import Project from "components/Project";
 import Button from "components/Button";
+import { StaticImageData } from "next/image";
 
 const ProjectsSection = () => {
   interface Project {
     name: string;
     skills: string[];
-    image: any;
+    image: StaticImageData;
     transition_delay: number;
   }
 

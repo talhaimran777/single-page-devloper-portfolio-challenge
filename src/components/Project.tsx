@@ -1,11 +1,11 @@
 import React from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Button from "components/Button";
 
 interface Project {
   name: string;
   skills: string[];
-  image: any;
+  image: StaticImageData;
   transition_delay: number;
 }
 
